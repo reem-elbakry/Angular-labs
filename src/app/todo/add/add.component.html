@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Enter new todo" #todo >
+    <div class="input-group-append">
+      <button class="btn btn-info" type="submit" (click)="add(todo.value)">Add</button>
+    </div>
+</div>
+<div class="d-flex">
+  <div class="ml-auto p-2 text-muted">Number of todo items: {{todoLength}}</div>
+</div>
+<ul class="list-group">
+  <li class="list-group-item  list-group-item-info">ToDo</li>
+  <li class="list-group-item list-group-item-action" *ngFor="let item of todoList">{{item.name}} 
+    <button class="btn btn-success float-right" value= {{item.id}} (click)="done($event)">Done</button>
+  </li>
+</ul>
+</div>

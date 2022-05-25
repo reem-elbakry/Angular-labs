@@ -1,0 +1,10 @@
+<div class="list-group m-3">
+    <button type="button" class="text-center list-group-item-action list-group-item-info" *ngFor="let country of peopleByCountry" [ngSwitch]="country.country">
+        <span *ngSwitchCase="'US'" class="text-danger">{{country.country}}</span>
+        <span *ngSwitchCase="'UK'" class="text-success">{{country.country}}</span>
+        <span *ngSwitchDefault>{{country.country}}</span>
+    <button type="button" class="list-group-item list-group-item-action" *ngFor="let people of country.people">
+        {{people.name}}
+    </button>
+    </button>
+</div>
