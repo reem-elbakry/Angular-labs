@@ -36,4 +36,14 @@ export class AddComponent implements OnInit {
       
   }
 
+  search(e: any){
+    this.todoList = this.todoList.filter((item) => {{
+      return item.name.includes(e.target.value);
+    }});
+
+  console.log(this.todoList);
+  }
+
+  
+
 }
